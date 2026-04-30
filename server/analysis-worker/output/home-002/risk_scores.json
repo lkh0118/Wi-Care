@@ -1,0 +1,403 @@
+[
+  {
+    "device_id": "home-002",
+    "date": "2026-04-02",
+    "risk_score": 28,
+    "risk_level": "정상",
+    "long_inactivity_score": 70.25,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 0.0,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-03",
+    "risk_score": 31,
+    "risk_level": "주의",
+    "long_inactivity_score": 71.16,
+    "daily_activity_drop_score": 0.25,
+    "time_slot_deviation_score": 11.73,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-04",
+    "risk_score": 31,
+    "risk_level": "주의",
+    "long_inactivity_score": 70.05,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 12.37,
+    "night_pattern_abnormality_score": 5.78,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-05",
+    "risk_score": 32,
+    "risk_level": "주의",
+    "long_inactivity_score": 73.38,
+    "daily_activity_drop_score": 4.63,
+    "time_slot_deviation_score": 7.45,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-06",
+    "risk_score": 32,
+    "risk_level": "주의",
+    "long_inactivity_score": 71.54,
+    "daily_activity_drop_score": 6.45,
+    "time_slot_deviation_score": 5.81,
+    "night_pattern_abnormality_score": 1.66,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-07",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 71.5,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 7.04,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-08",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 71.86,
+    "daily_activity_drop_score": 2.3,
+    "time_slot_deviation_score": 5.81,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-09",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 72.75,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 5.64,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-10",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 72.57,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 6.26,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-11",
+    "risk_score": 60,
+    "risk_level": "경고",
+    "long_inactivity_score": 97.52,
+    "daily_activity_drop_score": 45.35,
+    "time_slot_deviation_score": 44.17,
+    "night_pattern_abnormality_score": 8.73,
+    "reasons": [
+      "장시간 무활동 시간이 길다.",
+      "평소 대비 일일 활동량이 감소했다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-12",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 71.14,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 8.12,
+    "night_pattern_abnormality_score": 2.78,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-13",
+    "risk_score": 31,
+    "risk_level": "주의",
+    "long_inactivity_score": 69.46,
+    "daily_activity_drop_score": 1.87,
+    "time_slot_deviation_score": 11.75,
+    "night_pattern_abnormality_score": 2.75,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-14",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 72.25,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 3.67,
+    "night_pattern_abnormality_score": 2.78,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-15",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 72.03,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 4.59,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-16",
+    "risk_score": 28,
+    "risk_level": "정상",
+    "long_inactivity_score": 24.34,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 48.73,
+    "night_pattern_abnormality_score": 53.6,
+    "reasons": [
+      "평소와 다른 시간대 활동 패턴이 나타났다.",
+      "야간 활동 비중이 평소보다 높다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-17",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 72.42,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 6.19,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-18",
+    "risk_score": 29,
+    "risk_level": "정상",
+    "long_inactivity_score": 69.07,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 4.82,
+    "night_pattern_abnormality_score": 3.13,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-19",
+    "risk_score": 31,
+    "risk_level": "주의",
+    "long_inactivity_score": 71.86,
+    "daily_activity_drop_score": 5.12,
+    "time_slot_deviation_score": 7.22,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-20",
+    "risk_score": 29,
+    "risk_level": "정상",
+    "long_inactivity_score": 70.86,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 4.76,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-21",
+    "risk_score": 31,
+    "risk_level": "주의",
+    "long_inactivity_score": 71.4,
+    "daily_activity_drop_score": 7.03,
+    "time_slot_deviation_score": 3.86,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-22",
+    "risk_score": 30,
+    "risk_level": "주의",
+    "long_inactivity_score": 72.31,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 5.16,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-23",
+    "risk_score": 56,
+    "risk_level": "주의",
+    "long_inactivity_score": 87.5,
+    "daily_activity_drop_score": 49.23,
+    "time_slot_deviation_score": 42.3,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다.",
+      "평소 대비 일일 활동량이 감소했다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-24",
+    "risk_score": 32,
+    "risk_level": "주의",
+    "long_inactivity_score": 72.84,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 12.89,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-25",
+    "risk_score": 31,
+    "risk_level": "주의",
+    "long_inactivity_score": 72.88,
+    "daily_activity_drop_score": 0.0,
+    "time_slot_deviation_score": 10.31,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-26",
+    "risk_score": 31,
+    "risk_level": "주의",
+    "long_inactivity_score": 73.07,
+    "daily_activity_drop_score": 0.06,
+    "time_slot_deviation_score": 9.65,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-27",
+    "risk_score": 73,
+    "risk_level": "경고",
+    "long_inactivity_score": 100.0,
+    "daily_activity_drop_score": 98.21,
+    "time_slot_deviation_score": 41.42,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다.",
+      "평소 대비 일일 활동량이 감소했다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-28",
+    "risk_score": 72,
+    "risk_level": "경고",
+    "long_inactivity_score": 100.0,
+    "daily_activity_drop_score": 100.0,
+    "time_slot_deviation_score": 32.67,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다.",
+      "평소 대비 일일 활동량이 감소했다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-29",
+    "risk_score": 83,
+    "risk_level": "고위험",
+    "long_inactivity_score": 100.0,
+    "daily_activity_drop_score": 54.13,
+    "time_slot_deviation_score": 80.88,
+    "night_pattern_abnormality_score": 88.96,
+    "reasons": [
+      "장시간 무활동 시간이 길다.",
+      "평소 대비 일일 활동량이 감소했다.",
+      "평소와 다른 시간대 활동 패턴이 나타났다.",
+      "야간 활동 비중이 평소보다 높다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-30",
+    "risk_score": 77,
+    "risk_level": "경고",
+    "long_inactivity_score": 100.0,
+    "daily_activity_drop_score": 99.9,
+    "time_slot_deviation_score": 58.9,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다.",
+      "평소 대비 일일 활동량이 감소했다.",
+      "평소와 다른 시간대 활동 패턴이 나타났다."
+    ]
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-05-01",
+    "risk_score": 69,
+    "risk_level": "경고",
+    "long_inactivity_score": 100.0,
+    "daily_activity_drop_score": 91.18,
+    "time_slot_deviation_score": 28.59,
+    "night_pattern_abnormality_score": 0.0,
+    "reasons": [
+      "장시간 무활동 시간이 길다.",
+      "평소 대비 일일 활동량이 감소했다."
+    ]
+  }
+]

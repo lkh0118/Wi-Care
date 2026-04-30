@@ -1,0 +1,318 @@
+:root {
+  --bg: #f4f7fb;
+  --panel: #ffffff;
+  --line: #d9e1ea;
+  --text: #17202a;
+  --muted: #667085;
+  --normal: #1fa463;
+  --caution: #d8a31f;
+  --warning: #e66a2c;
+  --danger: #d92d20;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Malgun Gothic", "Segoe UI", Arial, sans-serif;
+}
+
+.layout {
+  width: min(1440px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 32px;
+}
+
+.topbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+.topbar p,
+.sectionHeader p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.statusBox {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 156px;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.headerControls {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.devicePicker {
+  display: grid;
+  gap: 6px;
+  min-width: 180px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.devicePicker select {
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--text);
+  padding: 0 10px;
+  font: inherit;
+  font-weight: 700;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--warning);
+}
+
+.statusDot.connected {
+  background: var(--normal);
+}
+
+.statusDot.error {
+  background: var(--danger);
+}
+
+.tableSection,
+.ledSection {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tableSection {
+  overflow-x: auto;
+}
+
+.metricTable {
+  width: 100%;
+  min-width: 1120px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.metricTable th,
+.metricTable td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.metricTable th {
+  background: #eaf0f6;
+  color: #27374a;
+  font-weight: 700;
+}
+
+.metricTable tr:last-child td {
+  border-bottom: 0;
+}
+
+.metricName {
+  font-weight: 700;
+}
+
+.metricValue {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  height: 26px;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.level-normal {
+  background: var(--normal);
+}
+
+.level-caution {
+  background: var(--caution);
+}
+
+.level-warning {
+  background: var(--warning);
+}
+
+.level-danger {
+  background: var(--danger);
+}
+
+.criteria {
+  color: #344054;
+  line-height: 1.35;
+}
+
+.emptyCell {
+  height: 120px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.ledSection {
+  margin-top: 18px;
+  padding: 18px;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: baseline;
+  margin-bottom: 16px;
+}
+
+.ledGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ledItem {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: #fbfcfe;
+  min-height: 132px;
+}
+
+.ledName {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.ledLights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.led {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  opacity: 0.2;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  justify-self: center;
+}
+
+.led.active {
+  opacity: 1;
+  box-shadow: 0 0 0 3px rgba(23, 32, 42, 0.08), 0 0 14px currentColor;
+}
+
+.led.normal {
+  color: var(--normal);
+  background: var(--normal);
+}
+
+.led.caution {
+  color: var(--caution);
+  background: var(--caution);
+}
+
+.led.warning {
+  color: var(--warning);
+  background: var(--warning);
+}
+
+.led.danger {
+  color: var(--danger);
+  background: var(--danger);
+}
+
+.ledLabels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
+  color: var(--muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.ledValue {
+  margin-top: 10px;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    width: min(100% - 20px, 1440px);
+    padding-top: 16px;
+  }
+
+  .topbar,
+  .sectionHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .headerControls {
+    width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .statusBox {
+    justify-content: flex-start;
+  }
+
+  .ledGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .ledGrid {
+    grid-template-columns: 1fr;
+  }
+}

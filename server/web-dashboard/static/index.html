@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wi-Care 대시보드</title>
+    <link rel="stylesheet" href="/static/dashboard.css">
+  </head>
+  <body>
+    <main class="layout">
+      <header class="topbar">
+        <div>
+          <h1>Wi-Care 서버 대시보드</h1>
+          <p id="summaryText">분석 결과를 불러오는 중입니다.</p>
+        </div>
+        <div class="headerControls">
+          <label class="devicePicker">
+            <span>사람/기기 선택</span>
+            <select id="deviceSelect" aria-label="사람 또는 기기 선택"></select>
+          </label>
+          <div class="statusBox">
+            <span class="statusDot" id="serverDot"></span>
+            <span id="serverStatus">연결 확인 중</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="tableSection" aria-label="분석 데이터 표">
+        <table class="metricTable">
+          <thead>
+            <tr>
+              <th>데이터 이름</th>
+              <th>데이터가 수정된 날짜(최신)</th>
+              <th>데이터 값</th>
+              <th>현재 단계</th>
+              <th>정상</th>
+              <th>주의</th>
+              <th>경고</th>
+              <th>위험</th>
+            </tr>
+          </thead>
+          <tbody id="metricRows">
+            <tr>
+              <td colspan="8" class="emptyCell">표시할 데이터를 준비 중입니다.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="ledSection" aria-label="상태 LED">
+        <div class="sectionHeader">
+          <h2>데이터별 상태 LED</h2>
+          <p>정상, 주의, 경고, 위험 4단계 기준으로 표시됩니다.</p>
+        </div>
+        <div class="ledGrid" id="ledGrid"></div>
+      </section>
+    </main>
+
+    <script src="/static/dashboard.js"></script>
+  </body>
+</html>

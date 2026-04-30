@@ -1,0 +1,28 @@
+[
+  {
+    "device_id": "home-001",
+    "period_type": "monthly",
+    "period_start": "2026-04-01",
+    "period_end": "2026-04-30",
+    "total_active_seconds": 540428,
+    "total_inactive_seconds": 1965172,
+    "movement_events": 3360,
+    "avg_daily_active_seconds": 18635.45,
+    "avg_movement_score": 24.69,
+    "max_longest_inactivity_seconds": 68326,
+    "avg_risk_score": 38.31
+  },
+  {
+    "device_id": "home-001",
+    "period_type": "monthly",
+    "period_start": "2026-05-01",
+    "period_end": "2026-05-01",
+    "total_active_seconds": 5692,
+    "total_inactive_seconds": 80708,
+    "movement_events": 43,
+    "avg_daily_active_seconds": 5692,
+    "avg_movement_score": 16.01,
+    "max_longest_inactivity_seconds": 62571,
+    "avg_risk_score": 73
+  }
+]

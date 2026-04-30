@@ -1,0 +1,91 @@
+{
+  "deviceId": "home-001",
+  "date": "2026-05-01",
+  "today": {
+    "totalActiveSeconds": 5692,
+    "totalInactiveSeconds": 80708,
+    "movementEvents": 43,
+    "avgMovementScore": 16.01,
+    "longestInactivitySeconds": 62571,
+    "avgSignalQuality": 0.93
+  },
+  "risk": {
+    "riskScore": 73,
+    "riskLevel": "경고",
+    "reasons": [
+      "장시간 무활동 시간이 길다.",
+      "평소 대비 일일 활동량이 감소했다.",
+      "평소와 다른 시간대 활동 패턴이 나타났다."
+    ]
+  },
+  "recent7Days": [
+    {
+      "date": "2026-04-25",
+      "activeSeconds": 20363,
+      "movementEvents": 122,
+      "avgMovementScore": 26.0
+    },
+    {
+      "date": "2026-04-26",
+      "activeSeconds": 20585,
+      "movementEvents": 123,
+      "avgMovementScore": 26.81
+    },
+    {
+      "date": "2026-04-27",
+      "activeSeconds": 5446,
+      "movementEvents": 41,
+      "avgMovementScore": 15.92
+    },
+    {
+      "date": "2026-04-28",
+      "activeSeconds": 6146,
+      "movementEvents": 51,
+      "avgMovementScore": 16.63
+    },
+    {
+      "date": "2026-04-29",
+      "activeSeconds": 10878,
+      "movementEvents": 73,
+      "avgMovementScore": 19.01
+    },
+    {
+      "date": "2026-04-30",
+      "activeSeconds": 5561,
+      "movementEvents": 46,
+      "avgMovementScore": 11.43
+    },
+    {
+      "date": "2026-05-01",
+      "activeSeconds": 5692,
+      "movementEvents": 43,
+      "avgMovementScore": 16.01
+    }
+  ],
+  "latestWeeklySummary": {
+    "device_id": "home-001",
+    "period_type": "weekly",
+    "period_start": "2026-04-27",
+    "period_end": "2026-05-01",
+    "total_active_seconds": 33723,
+    "total_inactive_seconds": 398277,
+    "movement_events": 254,
+    "avg_daily_active_seconds": 6744.6,
+    "avg_movement_score": 15.8,
+    "max_longest_inactivity_seconds": 68326,
+    "avg_risk_score": 76.2
+  },
+  "latestMonthlySummary": {
+    "device_id": "home-001",
+    "period_type": "monthly",
+    "period_start": "2026-05-01",
+    "period_end": "2026-05-01",
+    "total_active_seconds": 5692,
+    "total_inactive_seconds": 80708,
+    "movement_events": 43,
+    "avg_daily_active_seconds": 5692,
+    "avg_movement_score": 16.01,
+    "max_longest_inactivity_seconds": 62571,
+    "avg_risk_score": 73
+  }
+}

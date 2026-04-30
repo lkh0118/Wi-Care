@@ -1,0 +1,782 @@
+[
+  {
+    "device_id": "home-002",
+    "date": "2026-04-02",
+    "total_active_seconds": 20783,
+    "total_inactive_seconds": 65617,
+    "movement_events": 120,
+    "avg_movement_score": 26.32,
+    "max_movement_score": 69.84,
+    "avg_presence_prob": 0.853,
+    "avg_confidence": 0.942,
+    "avg_signal_quality": 0.925,
+    "longest_inactivity_seconds": 20232,
+    "time_slot_active_seconds": {
+      "morning": 7699,
+      "afternoon": 4572,
+      "evening": 6374,
+      "night": 2138
+    },
+    "time_slot_movement_score": {
+      "morning": 37.91,
+      "afternoon": 26.38,
+      "evening": 44.75,
+      "night": 8.38
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-03",
+    "total_active_seconds": 20746,
+    "total_inactive_seconds": 65654,
+    "movement_events": 129,
+    "avg_movement_score": 26.55,
+    "max_movement_score": 75.18,
+    "avg_presence_prob": 0.843,
+    "avg_confidence": 0.941,
+    "avg_signal_quality": 0.924,
+    "longest_inactivity_seconds": 20495,
+    "time_slot_active_seconds": {
+      "morning": 6783,
+      "afternoon": 5606,
+      "evening": 6537,
+      "night": 1820
+    },
+    "time_slot_movement_score": {
+      "morning": 34.3,
+      "afternoon": 31.63,
+      "evening": 46.48,
+      "night": 6.97
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-04",
+    "total_active_seconds": 21521,
+    "total_inactive_seconds": 64879,
+    "movement_events": 140,
+    "avg_movement_score": 27.73,
+    "max_movement_score": 60.46,
+    "avg_presence_prob": 0.864,
+    "avg_confidence": 0.938,
+    "avg_signal_quality": 0.912,
+    "longest_inactivity_seconds": 20173,
+    "time_slot_active_seconds": {
+      "morning": 6750,
+      "afternoon": 6041,
+      "evening": 6114,
+      "night": 2616
+    },
+    "time_slot_movement_score": {
+      "morning": 33.4,
+      "afternoon": 35.52,
+      "evening": 43.34,
+      "night": 9.83
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-05",
+    "total_active_seconds": 20322,
+    "total_inactive_seconds": 66078,
+    "movement_events": 128,
+    "avg_movement_score": 26.25,
+    "max_movement_score": 71.69,
+    "avg_presence_prob": 0.853,
+    "avg_confidence": 0.938,
+    "avg_signal_quality": 0.913,
+    "longest_inactivity_seconds": 21133,
+    "time_slot_active_seconds": {
+      "morning": 6962,
+      "afternoon": 5342,
+      "evening": 6660,
+      "night": 1358
+    },
+    "time_slot_movement_score": {
+      "morning": 34.8,
+      "afternoon": 32.08,
+      "evening": 46.52,
+      "night": 5.33
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-06",
+    "total_active_seconds": 19882,
+    "total_inactive_seconds": 66518,
+    "movement_events": 125,
+    "avg_movement_score": 25.59,
+    "max_movement_score": 61.51,
+    "avg_presence_prob": 0.843,
+    "avg_confidence": 0.941,
+    "avg_signal_quality": 0.924,
+    "longest_inactivity_seconds": 20603,
+    "time_slot_active_seconds": {
+      "morning": 6646,
+      "afternoon": 5566,
+      "evening": 5636,
+      "night": 2034
+    },
+    "time_slot_movement_score": {
+      "morning": 33.51,
+      "afternoon": 31.85,
+      "evening": 39.71,
+      "night": 7.88
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-07",
+    "total_active_seconds": 20869,
+    "total_inactive_seconds": 65531,
+    "movement_events": 117,
+    "avg_movement_score": 26.8,
+    "max_movement_score": 68.83,
+    "avg_presence_prob": 0.849,
+    "avg_confidence": 0.939,
+    "avg_signal_quality": 0.917,
+    "longest_inactivity_seconds": 20592,
+    "time_slot_active_seconds": {
+      "morning": 6802,
+      "afternoon": 6218,
+      "evening": 5862,
+      "night": 1987
+    },
+    "time_slot_movement_score": {
+      "morning": 34.74,
+      "afternoon": 33.75,
+      "evening": 43.61,
+      "night": 7.24
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-08",
+    "total_active_seconds": 20347,
+    "total_inactive_seconds": 66053,
+    "movement_events": 119,
+    "avg_movement_score": 25.66,
+    "max_movement_score": 66.99,
+    "avg_presence_prob": 0.86,
+    "avg_confidence": 0.903,
+    "avg_signal_quality": 0.878,
+    "longest_inactivity_seconds": 20695,
+    "time_slot_active_seconds": {
+      "morning": 6619,
+      "afternoon": 5865,
+      "evening": 6289,
+      "night": 1574
+    },
+    "time_slot_movement_score": {
+      "morning": 32.38,
+      "afternoon": 32.37,
+      "evening": 44.21,
+      "night": 6.3
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-09",
+    "total_active_seconds": 20948,
+    "total_inactive_seconds": 65452,
+    "movement_events": 125,
+    "avg_movement_score": 27.13,
+    "max_movement_score": 79.27,
+    "avg_presence_prob": 0.845,
+    "avg_confidence": 0.94,
+    "avg_signal_quality": 0.922,
+    "longest_inactivity_seconds": 20953,
+    "time_slot_active_seconds": {
+      "morning": 6454,
+      "afternoon": 6211,
+      "evening": 6371,
+      "night": 1912
+    },
+    "time_slot_movement_score": {
+      "morning": 33.28,
+      "afternoon": 33.99,
+      "evening": 47.21,
+      "night": 7.32
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-10",
+    "total_active_seconds": 21049,
+    "total_inactive_seconds": 65351,
+    "movement_events": 133,
+    "avg_movement_score": 26.55,
+    "max_movement_score": 69.24,
+    "avg_presence_prob": 0.859,
+    "avg_confidence": 0.942,
+    "avg_signal_quality": 0.924,
+    "longest_inactivity_seconds": 20900,
+    "time_slot_active_seconds": {
+      "morning": 7005,
+      "afternoon": 6043,
+      "evening": 6699,
+      "night": 1302
+    },
+    "time_slot_movement_score": {
+      "morning": 35.16,
+      "afternoon": 32.37,
+      "evening": 47.64,
+      "night": 5.17
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-11",
+    "total_active_seconds": 14007,
+    "total_inactive_seconds": 72393,
+    "movement_events": 88,
+    "avg_movement_score": 18.49,
+    "max_movement_score": 71.31,
+    "avg_presence_prob": 0.857,
+    "avg_confidence": 0.941,
+    "avg_signal_quality": 0.922,
+    "longest_inactivity_seconds": 28087,
+    "time_slot_active_seconds": {
+      "morning": 5426,
+      "afternoon": 772,
+      "evening": 5997,
+      "night": 1812
+    },
+    "time_slot_movement_score": {
+      "morning": 27.33,
+      "afternoon": 7.33,
+      "evening": 45.36,
+      "night": 6.78
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-12",
+    "total_active_seconds": 20059,
+    "total_inactive_seconds": 66341,
+    "movement_events": 131,
+    "avg_movement_score": 25.98,
+    "max_movement_score": 69.56,
+    "avg_presence_prob": 0.841,
+    "avg_confidence": 0.938,
+    "avg_signal_quality": 0.916,
+    "longest_inactivity_seconds": 20488,
+    "time_slot_active_seconds": {
+      "morning": 6461,
+      "afternoon": 5653,
+      "evening": 5813,
+      "night": 2132
+    },
+    "time_slot_movement_score": {
+      "morning": 32.96,
+      "afternoon": 31.86,
+      "evening": 42.22,
+      "night": 8.2
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-13",
+    "total_active_seconds": 19780,
+    "total_inactive_seconds": 66620,
+    "movement_events": 132,
+    "avg_movement_score": 25.85,
+    "max_movement_score": 65.62,
+    "avg_presence_prob": 0.852,
+    "avg_confidence": 0.937,
+    "avg_signal_quality": 0.911,
+    "longest_inactivity_seconds": 20004,
+    "time_slot_active_seconds": {
+      "morning": 5692,
+      "afternoon": 5987,
+      "evening": 5979,
+      "night": 2122
+    },
+    "time_slot_movement_score": {
+      "morning": 30.36,
+      "afternoon": 33.05,
+      "evening": 43.44,
+      "night": 8.28
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-14",
+    "total_active_seconds": 20155,
+    "total_inactive_seconds": 66245,
+    "movement_events": 126,
+    "avg_movement_score": 26.17,
+    "max_movement_score": 72.95,
+    "avg_presence_prob": 0.849,
+    "avg_confidence": 0.94,
+    "avg_signal_quality": 0.92,
+    "longest_inactivity_seconds": 20808,
+    "time_slot_active_seconds": {
+      "morning": 6380,
+      "afternoon": 5176,
+      "evening": 6413,
+      "night": 2186
+    },
+    "time_slot_movement_score": {
+      "morning": 32.86,
+      "afternoon": 30.08,
+      "evening": 46.22,
+      "night": 8.21
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-15",
+    "total_active_seconds": 20895,
+    "total_inactive_seconds": 65505,
+    "movement_events": 123,
+    "avg_movement_score": 26.61,
+    "max_movement_score": 66.76,
+    "avg_presence_prob": 0.869,
+    "avg_confidence": 0.941,
+    "avg_signal_quality": 0.918,
+    "longest_inactivity_seconds": 20745,
+    "time_slot_active_seconds": {
+      "morning": 7058,
+      "afternoon": 5756,
+      "evening": 6377,
+      "night": 1704
+    },
+    "time_slot_movement_score": {
+      "morning": 35.94,
+      "afternoon": 31.8,
+      "evening": 45.67,
+      "night": 6.19
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-16",
+    "total_active_seconds": 28115,
+    "total_inactive_seconds": 58285,
+    "movement_events": 175,
+    "avg_movement_score": 31.41,
+    "max_movement_score": 68.66,
+    "avg_presence_prob": 0.842,
+    "avg_confidence": 0.937,
+    "avg_signal_quality": 0.913,
+    "longest_inactivity_seconds": 7010,
+    "time_slot_active_seconds": {
+      "morning": 6403,
+      "afternoon": 5913,
+      "evening": 6258,
+      "night": 9541
+    },
+    "time_slot_movement_score": {
+      "morning": 32.93,
+      "afternoon": 33.61,
+      "evening": 44.06,
+      "night": 22.3
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-17",
+    "total_active_seconds": 20673,
+    "total_inactive_seconds": 65727,
+    "movement_events": 116,
+    "avg_movement_score": 26.31,
+    "max_movement_score": 65.43,
+    "avg_presence_prob": 0.858,
+    "avg_confidence": 0.941,
+    "avg_signal_quality": 0.921,
+    "longest_inactivity_seconds": 20857,
+    "time_slot_active_seconds": {
+      "morning": 6961,
+      "afternoon": 5576,
+      "evening": 6448,
+      "night": 1688
+    },
+    "time_slot_movement_score": {
+      "morning": 33.64,
+      "afternoon": 31.59,
+      "evening": 47.71,
+      "night": 6.14
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-18",
+    "total_active_seconds": 22751,
+    "total_inactive_seconds": 63649,
+    "movement_events": 143,
+    "avg_movement_score": 29.25,
+    "max_movement_score": 63.78,
+    "avg_presence_prob": 0.859,
+    "avg_confidence": 0.943,
+    "avg_signal_quality": 0.927,
+    "longest_inactivity_seconds": 19892,
+    "time_slot_active_seconds": {
+      "morning": 7479,
+      "afternoon": 5980,
+      "evening": 6416,
+      "night": 2876
+    },
+    "time_slot_movement_score": {
+      "morning": 36.48,
+      "afternoon": 34.23,
+      "evening": 47.55,
+      "night": 10.94
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-19",
+    "total_active_seconds": 19947,
+    "total_inactive_seconds": 66453,
+    "movement_events": 122,
+    "avg_movement_score": 26.04,
+    "max_movement_score": 67.82,
+    "avg_presence_prob": 0.849,
+    "avg_confidence": 0.939,
+    "avg_signal_quality": 0.917,
+    "longest_inactivity_seconds": 20695,
+    "time_slot_active_seconds": {
+      "morning": 6893,
+      "afternoon": 5426,
+      "evening": 5929,
+      "night": 1699
+    },
+    "time_slot_movement_score": {
+      "morning": 35.58,
+      "afternoon": 30.43,
+      "evening": 44.16,
+      "night": 6.54
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-20",
+    "total_active_seconds": 21148,
+    "total_inactive_seconds": 65252,
+    "movement_events": 115,
+    "avg_movement_score": 27.52,
+    "max_movement_score": 76.39,
+    "avg_presence_prob": 0.854,
+    "avg_confidence": 0.905,
+    "avg_signal_quality": 0.883,
+    "longest_inactivity_seconds": 20407,
+    "time_slot_active_seconds": {
+      "morning": 6469,
+      "afternoon": 5620,
+      "evening": 6801,
+      "night": 2258
+    },
+    "time_slot_movement_score": {
+      "morning": 32.22,
+      "afternoon": 32.61,
+      "evening": 50.55,
+      "night": 8.68
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-21",
+    "total_active_seconds": 19725,
+    "total_inactive_seconds": 66675,
+    "movement_events": 115,
+    "avg_movement_score": 25.81,
+    "max_movement_score": 76.39,
+    "avg_presence_prob": 0.838,
+    "avg_confidence": 0.94,
+    "avg_signal_quality": 0.924,
+    "longest_inactivity_seconds": 20564,
+    "time_slot_active_seconds": {
+      "morning": 6397,
+      "afternoon": 5411,
+      "evening": 6036,
+      "night": 1881
+    },
+    "time_slot_movement_score": {
+      "morning": 31.97,
+      "afternoon": 31.21,
+      "evening": 45.54,
+      "night": 7.28
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-22",
+    "total_active_seconds": 20808,
+    "total_inactive_seconds": 65592,
+    "movement_events": 124,
+    "avg_movement_score": 26.61,
+    "max_movement_score": 71.78,
+    "avg_presence_prob": 0.843,
+    "avg_confidence": 0.938,
+    "avg_signal_quality": 0.914,
+    "longest_inactivity_seconds": 20826,
+    "time_slot_active_seconds": {
+      "morning": 7026,
+      "afternoon": 5289,
+      "evening": 6595,
+      "night": 1898
+    },
+    "time_slot_movement_score": {
+      "morning": 34.98,
+      "afternoon": 30.89,
+      "evening": 46.66,
+      "night": 7.08
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-23",
+    "total_active_seconds": 13433,
+    "total_inactive_seconds": 72967,
+    "movement_events": 91,
+    "avg_movement_score": 18.07,
+    "max_movement_score": 67.85,
+    "avg_presence_prob": 0.847,
+    "avg_confidence": 0.941,
+    "avg_signal_quality": 0.924,
+    "longest_inactivity_seconds": 25200,
+    "time_slot_active_seconds": {
+      "morning": 4925,
+      "afternoon": 750,
+      "evening": 6382,
+      "night": 1376
+    },
+    "time_slot_movement_score": {
+      "morning": 27.28,
+      "afternoon": 7.82,
+      "evening": 45.29,
+      "night": 5.23
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-24",
+    "total_active_seconds": 21055,
+    "total_inactive_seconds": 65345,
+    "movement_events": 131,
+    "avg_movement_score": 27.11,
+    "max_movement_score": 67.03,
+    "avg_presence_prob": 0.858,
+    "avg_confidence": 0.941,
+    "avg_signal_quality": 0.921,
+    "longest_inactivity_seconds": 20977,
+    "time_slot_active_seconds": {
+      "morning": 6186,
+      "afternoon": 6197,
+      "evening": 6919,
+      "night": 1753
+    },
+    "time_slot_movement_score": {
+      "morning": 31.13,
+      "afternoon": 35.35,
+      "evening": 49.56,
+      "night": 6.69
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-25",
+    "total_active_seconds": 20872,
+    "total_inactive_seconds": 65528,
+    "movement_events": 128,
+    "avg_movement_score": 27.56,
+    "max_movement_score": 77.95,
+    "avg_presence_prob": 0.852,
+    "avg_confidence": 0.939,
+    "avg_signal_quality": 0.917,
+    "longest_inactivity_seconds": 20990,
+    "time_slot_active_seconds": {
+      "morning": 6950,
+      "afternoon": 5829,
+      "evening": 6368,
+      "night": 1725
+    },
+    "time_slot_movement_score": {
+      "morning": 36.9,
+      "afternoon": 32.73,
+      "evening": 47.16,
+      "night": 6.88
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-26",
+    "total_active_seconds": 20663,
+    "total_inactive_seconds": 65737,
+    "movement_events": 135,
+    "avg_movement_score": 27.54,
+    "max_movement_score": 71.19,
+    "avg_presence_prob": 0.841,
+    "avg_confidence": 0.939,
+    "avg_signal_quality": 0.919,
+    "longest_inactivity_seconds": 21045,
+    "time_slot_active_seconds": {
+      "morning": 6983,
+      "afternoon": 5850,
+      "evening": 6367,
+      "night": 1463
+    },
+    "time_slot_movement_score": {
+      "morning": 36.09,
+      "afternoon": 34.77,
+      "evening": 48.1,
+      "night": 5.44
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-27",
+    "total_active_seconds": 6183,
+    "total_inactive_seconds": 80217,
+    "movement_events": 53,
+    "avg_movement_score": 16.3,
+    "max_movement_score": 53.16,
+    "avg_presence_prob": 0.856,
+    "avg_confidence": 0.938,
+    "avg_signal_quality": 0.911,
+    "longest_inactivity_seconds": 64844,
+    "time_slot_active_seconds": {
+      "morning": 1968,
+      "afternoon": 991,
+      "evening": 3224,
+      "night": 0
+    },
+    "time_slot_movement_score": {
+      "morning": 21.07,
+      "afternoon": 19.91,
+      "evening": 35.23,
+      "night": 0.54
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-28",
+    "total_active_seconds": 5345,
+    "total_inactive_seconds": 81055,
+    "movement_events": 37,
+    "avg_movement_score": 15.99,
+    "max_movement_score": 51.57,
+    "avg_presence_prob": 0.845,
+    "avg_confidence": 0.942,
+    "avg_signal_quality": 0.928,
+    "longest_inactivity_seconds": 67990,
+    "time_slot_active_seconds": {
+      "morning": 1783,
+      "afternoon": 986,
+      "evening": 2576,
+      "night": 0
+    },
+    "time_slot_movement_score": {
+      "morning": 22.86,
+      "afternoon": 20.31,
+      "evening": 31.19,
+      "night": 0.0
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-29",
+    "total_active_seconds": 11461,
+    "total_inactive_seconds": 74939,
+    "movement_events": 77,
+    "avg_movement_score": 19.72,
+    "max_movement_score": 58.57,
+    "avg_presence_prob": 0.855,
+    "avg_confidence": 0.941,
+    "avg_signal_quality": 0.922,
+    "longest_inactivity_seconds": 47626,
+    "time_slot_active_seconds": {
+      "morning": 1913,
+      "afternoon": 861,
+      "evening": 2950,
+      "night": 5737
+    },
+    "time_slot_movement_score": {
+      "morning": 21.73,
+      "afternoon": 19.28,
+      "evening": 32.86,
+      "night": 11.98
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-04-30",
+    "total_active_seconds": 5160,
+    "total_inactive_seconds": 81240,
+    "movement_events": 46,
+    "avg_movement_score": 11.5,
+    "max_movement_score": 62.25,
+    "avg_presence_prob": 0.845,
+    "avg_confidence": 0.938,
+    "avg_signal_quality": 0.915,
+    "longest_inactivity_seconds": 62525,
+    "time_slot_active_seconds": {
+      "morning": 1986,
+      "afternoon": 289,
+      "evening": 2885,
+      "night": 0
+    },
+    "time_slot_movement_score": {
+      "morning": 17.8,
+      "afternoon": 4.25,
+      "evening": 33.87,
+      "night": 1.02
+    },
+    "window_count": 24
+  },
+  {
+    "device_id": "home-002",
+    "date": "2026-05-01",
+    "total_active_seconds": 5710,
+    "total_inactive_seconds": 80690,
+    "movement_events": 48,
+    "avg_movement_score": 16.6,
+    "max_movement_score": 52.31,
+    "avg_presence_prob": 0.847,
+    "avg_confidence": 0.94,
+    "avg_signal_quality": 0.922,
+    "longest_inactivity_seconds": 61898,
+    "time_slot_active_seconds": {
+      "morning": 1918,
+      "afternoon": 984,
+      "evening": 2808,
+      "night": 0
+    },
+    "time_slot_movement_score": {
+      "morning": 22.16,
+      "afternoon": 19.69,
+      "evening": 33.61,
+      "night": 1.6
+    },
+    "window_count": 24
+  }
+]

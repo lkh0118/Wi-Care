@@ -1,0 +1,67 @@
+[
+  {
+    "device_id": "home-002",
+    "period_type": "weekly",
+    "period_start": "2026-03-30",
+    "period_end": "2026-04-05",
+    "total_active_seconds": 83372,
+    "total_inactive_seconds": 262228,
+    "movement_events": 517,
+    "avg_daily_active_seconds": 20843,
+    "avg_movement_score": 26.71,
+    "max_longest_inactivity_seconds": 21133,
+    "avg_risk_score": 30.5
+  },
+  {
+    "device_id": "home-002",
+    "period_type": "weekly",
+    "period_start": "2026-04-06",
+    "period_end": "2026-04-12",
+    "total_active_seconds": 137161,
+    "total_inactive_seconds": 467639,
+    "movement_events": 838,
+    "avg_daily_active_seconds": 19594.43,
+    "avg_movement_score": 25.17,
+    "max_longest_inactivity_seconds": 28087,
+    "avg_risk_score": 34.57
+  },
+  {
+    "device_id": "home-002",
+    "period_type": "weekly",
+    "period_start": "2026-04-13",
+    "period_end": "2026-04-19",
+    "total_active_seconds": 152316,
+    "total_inactive_seconds": 452484,
+    "movement_events": 937,
+    "avg_daily_active_seconds": 21759.43,
+    "avg_movement_score": 27.38,
+    "max_longest_inactivity_seconds": 20857,
+    "avg_risk_score": 29.86
+  },
+  {
+    "device_id": "home-002",
+    "period_type": "weekly",
+    "period_start": "2026-04-20",
+    "period_end": "2026-04-26",
+    "total_active_seconds": 137704,
+    "total_inactive_seconds": 467096,
+    "movement_events": 839,
+    "avg_daily_active_seconds": 19672,
+    "avg_movement_score": 25.75,
+    "max_longest_inactivity_seconds": 25200,
+    "avg_risk_score": 34.29
+  },
+  {
+    "device_id": "home-002",
+    "period_type": "weekly",
+    "period_start": "2026-04-27",
+    "period_end": "2026-05-01",
+    "total_active_seconds": 33859,
+    "total_inactive_seconds": 398141,
+    "movement_events": 261,
+    "avg_daily_active_seconds": 6771.8,
+    "avg_movement_score": 16.02,
+    "max_longest_inactivity_seconds": 67990,
+    "avg_risk_score": 74.8
+  }
+]
