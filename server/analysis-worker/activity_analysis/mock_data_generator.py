@@ -1,3 +1,4 @@
+# 서버 API 수신 데이터 형식에 맞는 장치별 Mock 활동 데이터를 생성한다.
 from __future__ import annotations
 
 import random
@@ -16,12 +17,14 @@ def generate_mock_activity_windows(
     seed: int = 42,
 ) -> list[dict[str, Any]]:
     """서버 수신 데이터 형식에 맞는 30일치 활동 구간 데이터를 생성한다."""
+    # seed를 고정하면 실행할 때마다 같은 Mock 데이터가 만들어져서 테스트 결과 비교가 쉽다.
     random.seed(seed)
 
     if start_date is None:
         start_date = datetime(2026, 4, 2, 0, 0, tzinfo=KST)
 
     windows: list[dict[str, Any]] = []
+    # 예: 30일 * 24시간 * 60분 / 60분 = 720개 구간.
     total_windows = int(days * 24 * 60 / interval_minutes)
 
     for index in range(total_windows):
@@ -33,11 +36,13 @@ def generate_mock_activity_windows(
         profile = _profile_for_hour(hour)
         anomaly = _anomaly_for_day(day_index, hour)
 
+        # 시간대별 기본 활동 패턴에 의도적인 이상 상황과 랜덤 노이즈를 더한다.
         movement_score = _clamp(profile["movement"] + anomaly["movement_delta"] + random.gauss(0, 5), 0, 100)
         presence_prob = _clamp(profile["presence"] + anomaly["presence_delta"] + random.gauss(0, 0.04), 0, 1)
         signal_quality = _clamp(0.92 + anomaly["signal_delta"] + random.gauss(0, 0.03), 0, 1)
 
         interval_seconds = interval_minutes * 60
+        # 움직임 점수와 존재 확률이 높을수록 활동 시간 비율을 크게 잡는다.
         active_ratio = _clamp((movement_score / 100) * presence_prob + anomaly["active_ratio_delta"], 0, 1)
         active_seconds = int(interval_seconds * active_ratio)
         inactive_seconds = interval_seconds - active_seconds
@@ -72,6 +77,8 @@ def generate_mock_activity_windows(
 
 
 def _profile_for_hour(hour: int) -> dict[str, float]:
+    # 하루 시간대별 일반적인 생활 패턴을 단순 규칙으로 표현한다.
+    # 야간은 움직임이 적고, 아침/저녁은 움직임이 많도록 설정했다.
     if 0 <= hour < 6:
         return {"movement": 5, "presence": 0.86}
     if 6 <= hour < 9:
@@ -86,6 +93,7 @@ def _profile_for_hour(hour: int) -> dict[str, float]:
 
 
 def _anomaly_for_day(day_index: int, hour: int) -> dict[str, float]:
+    # 분석 로직이 위험 신호를 잡는지 확인하기 위해 일부 날짜에 이상 패턴을 섞는다.
     anomaly = {
         "movement_delta": 0.0,
         "presence_delta": 0.0,
@@ -123,6 +131,8 @@ def _classify_state(
     inactive_seconds: int,
     interval_seconds: int,
 ) -> str:
+    # Mock 데이터의 상태 라벨이다.
+    # 실제 Python 분석기에서는 CSI 분석 결과로 이 값을 계산하게 된다.
     if presence_prob < 0.35:
         return "empty"
     if inactive_seconds >= interval_seconds * 0.9 and presence_prob >= 0.65:
@@ -133,5 +143,5 @@ def _classify_state(
 
 
 def _clamp(value: float, minimum: float, maximum: float) -> float:
+    # 확률과 점수가 정의된 범위를 벗어나지 않도록 제한한다.
     return max(minimum, min(maximum, value))
-

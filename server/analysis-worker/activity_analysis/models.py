@@ -25,28 +25,6 @@ class ActivityWindow:
     source: str
     schema_version: str
 
-    @classmethod
-    def from_api_payload(cls, payload: dict[str, Any]) -> "ActivityWindow":
-        return cls(
-            device_id=str(payload["deviceId"]),
-            window_start=datetime.fromisoformat(payload["windowStart"]),
-            window_end=datetime.fromisoformat(payload["windowEnd"]),
-            movement_score=float(payload["movementScore"]),
-            presence_prob=float(payload["presenceProb"]),
-            activity_state=str(payload["activityState"]),
-            confidence=float(payload["confidence"]),
-            active_seconds=int(payload["activeSeconds"]),
-            inactive_seconds=int(payload["inactiveSeconds"]),
-            movement_events=int(payload["movementEvents"]),
-            avg_movement_score=float(payload.get("avgMovementScore", payload["movementScore"])),
-            max_movement_score=float(payload.get("maxMovementScore", payload["movementScore"])),
-            min_movement_score=float(payload.get("minMovementScore", payload["movementScore"])),
-            signal_quality=float(payload["signalQuality"]),
-            sample_count=int(payload.get("sampleCount", 0)),
-            source=str(payload.get("source", "unknown")),
-            schema_version=str(payload["schemaVersion"]),
-        )
-
 
 @dataclass(frozen=True)
 class DailySummary:
@@ -105,4 +83,3 @@ def to_json_dict(value: Any) -> Any:
     if isinstance(value, (datetime, date)):
         return value.isoformat()
     return value
-

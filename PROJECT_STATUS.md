@@ -394,3 +394,164 @@
 - ESP32-C5 데이터 포맷 변경 없음
 - WPF 연동 방식 변경 없음
 - 서버 API 변경 없음
+
+## 2026-05-01 소스코드 최상단 역할 주석 추가
+
+### 작업 내용
+
+- 각 소스코드 파일 첫 줄에 해당 파일의 대표 역할을 설명하는 주석 추가
+- Python, JavaScript, CSS, HTML 파일의 주석 문법에 맞춰 작성
+
+### 수정한 파일
+
+- `PROJECT_STATUS.md`
+- `server/analysis-worker/run_analysis.py`
+- `server/analysis-worker/activity_analysis/__init__.py`
+- `server/analysis-worker/activity_analysis/models.py`
+- `server/analysis-worker/activity_analysis/mock_data_generator.py`
+- `server/analysis-worker/activity_analysis/analyzer.py`
+- `server/web-dashboard/dashboard_server.py`
+- `server/web-dashboard/static/index.html`
+- `server/web-dashboard/static/dashboard.css`
+- `server/web-dashboard/static/dashboard.js`
+
+### 추가한 파일
+
+- 없음
+
+### 삭제한 파일
+
+- 없음
+
+### 현재 상태
+
+- 소스코드 파일을 열었을 때 첫 줄에서 파일의 대표 역할을 바로 확인할 수 있다.
+- Python 문법 검증과 Mock 분석 실행이 정상 통과했다.
+
+### 남은 작업
+
+- 새 소스코드 파일을 추가할 때도 첫 줄 역할 주석을 유지한다.
+
+### 문제점
+
+- 없음
+
+### 다음 작업
+
+- FastAPI 서버 코드 추가 시 동일한 형식으로 파일 최상단 역할 주석을 작성한다.
+
+### 역할 및 인터페이스 변경 사항
+
+- 역할 변경 없음
+- ESP32-C5 데이터 포맷 변경 없음
+- WPF 연동 방식 변경 없음
+- 서버 API 변경 없음
+
+## 2026-05-01 소스코드 학습용 주석 추가
+
+### 작업 내용
+
+- 서버 분석 Worker Python 코드에 학습용 한국어 주석 추가
+- 데이터 모델, Mock 데이터 생성, 일/주/月 분석, 위험 점수 계산 흐름 설명 추가
+- 웹 대시보드 서버 Python 코드에 요청 처리와 JSON 응답 흐름 설명 추가
+- 대시보드 JavaScript 코드에 장치 선택, 2초 폴링, 표/LED 렌더링 설명 추가
+
+### 수정한 파일
+
+- `PROJECT_STATUS.md`
+- `server/analysis-worker/run_analysis.py`
+- `server/analysis-worker/activity_analysis/models.py`
+- `server/analysis-worker/activity_analysis/mock_data_generator.py`
+- `server/analysis-worker/activity_analysis/analyzer.py`
+- `server/web-dashboard/dashboard_server.py`
+- `server/web-dashboard/static/dashboard.js`
+
+### 추가한 파일
+
+- 없음
+
+### 삭제한 파일
+
+- 없음
+
+### 현재 상태
+
+- 주요 소스코드에 역할 중심 주석이 추가되어 코드를 읽으며 흐름을 따라가기 쉬운 상태다.
+- 문법 검증과 Mock 분석 실행이 정상 통과했다.
+
+### 남은 작업
+
+- FastAPI 서버와 PostgreSQL 코드가 추가되면 동일 기준으로 주석을 추가한다.
+
+### 문제점
+
+- 없음
+
+### 다음 작업
+
+- 실제 서버 API 구현 시 요청 DTO, DB 저장 계층, 대시보드 조회 API에도 학습용 주석을 유지한다.
+
+### 역할 및 인터페이스 변경 사항
+
+- 역할 변경 없음
+- ESP32-C5 데이터 포맷 변경 없음
+- WPF 연동 방식 변경 없음
+- 서버 API 변경 없음
+
+## 2026-05-12 개발 규칙 문서화 및 아키텍처 문서 한국어화
+
+### 작업 내용
+
+- `README.md`에 기록된 개발 규칙을 `PROJECT_STATUS.md`에도 기록
+- 헥사고날 아키텍처와 MVVM을 함께 사용하는 현재 구조를 한국어 문서로 정리
+- `PROJECT_STATUS.md`를 UTF-8 기준으로 다시 읽고 기존 개발 규칙을 확인
+
+### 개발 규칙
+
+- 변경 사항이 생길 때마다 `PROJECT_STATUS.md`를 갱신한다.
+- Python 코드는 입력부, 파싱부, 분석부, 출력부, 서버 전송부를 분리한다.
+- ESP32-C5 데이터 포맷 변경 가능성을 고려해 Parser 인터페이스를 유지한다.
+- WPF는 분석 로직을 포함하지 않고 Python 분석 결과만 사용한다.
+- 서버는 Raw CSI가 아닌 분석 요약 데이터를 저장하고 장기 패턴을 분석한다.
+- 설정값은 `.env` 또는 별도 설정 파일로 분리한다.
+- 데이터베이스 스키마 변경 시 `server/database/`에 SQL 또는 마이그레이션 파일을 남긴다.
+
+### 수정한 파일
+
+- `PROJECT_STATUS.md`
+- `docs/HEXAGONAL_ARCHITECTURE.md`
+
+### 추가한 파일
+
+- 없음
+
+### 삭제한 파일
+
+- 없음
+
+### 현재 상태
+
+- `PROJECT_STATUS.md`는 UTF-8로 정상 디코딩되며 한국어 내용도 정상 확인된다.
+- `docs/HEXAGONAL_ARCHITECTURE.md`는 한국어로 작성되어 헥사고날 아키텍처와 MVVM의 역할을 설명한다.
+- 현재 구조는 분석 Worker에 헥사고날 아키텍처를 적용하고, 웹 대시보드에 MVVM 방식의 ViewModel 분리를 적용하는 방향이다.
+
+### 남은 작업
+
+- 새 기능이나 구조 변경이 생길 때마다 이 파일을 계속 갱신한다.
+- FastAPI, PostgreSQL, Parser 구현이 추가되면 개발 규칙에 맞춰 입력부, 파싱부, 분석부, 출력부, 서버 전송부를 분리한다.
+
+### 문제점
+
+- PowerShell `Get-Content` 출력에서는 한글이 깨져 보일 수 있으나, 파일은 UTF-8로 정상 저장되어 있다.
+- 문서 확인 시 한국어가 깨져 보이면 UTF-8 디코딩 기준으로 다시 확인한다.
+
+### 다음 작업
+
+- 이후 코드나 문서 변경 시 `PROJECT_STATUS.md`에 작업 내용, 수정 파일, 현재 상태, 남은 작업을 함께 기록한다.
+
+### 역할 및 인터페이스 변경 사항
+
+- 역할 변경 없음
+- ESP32-C5 데이터 포맷 변경 없음
+- WPF 연동 방식 변경 없음
+- 서버 API 변경 없음

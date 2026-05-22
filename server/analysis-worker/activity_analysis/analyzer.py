@@ -1,3 +1,4 @@
+# 활동 구간 데이터를 일/주/월 요약과 위험 점수로 분석한다.
 from __future__ import annotations
 
 from collections import defaultdict
@@ -8,6 +9,7 @@ from activity_analysis.models import ActivityWindow, DailySummary, PeriodSummary
 
 
 TIME_SLOTS = {
+    # 시간대별 활동 패턴 분석을 위한 구간 정의다.
     "morning": range(6, 12),
     "afternoon": range(12, 18),
     "evening": range(18, 22),
@@ -16,6 +18,7 @@ TIME_SLOTS = {
 
 
 def summarize_daily(windows: list[ActivityWindow]) -> list[DailySummary]:
+    # 먼저 deviceId와 날짜별로 구간 데이터를 묶는다.
     grouped: dict[tuple[str, date], list[ActivityWindow]] = defaultdict(list)
     for window in windows:
         grouped[(window.device_id, window.window_start.date())].append(window)
@@ -26,12 +29,14 @@ def summarize_daily(windows: list[ActivityWindow]) -> list[DailySummary]:
         slot_active_seconds = {slot: 0 for slot in TIME_SLOTS}
         slot_scores: dict[str, list[float]] = {slot: [] for slot in TIME_SLOTS}
 
+        # 하루 안에서도 오전/오후/저녁/야간 활동량을 따로 누적한다.
         for window in ordered:
             slot = time_slot_for_hour(window.window_start.hour)
             slot_active_seconds[slot] += window.active_seconds
             slot_scores[slot].append(window.avg_movement_score)
 
         summaries.append(
+            # 일일 요약은 대시보드와 장기 분석의 가장 기본 단위다.
             DailySummary(
                 device_id=device_id,
                 date=target_date,
@@ -57,10 +62,12 @@ def summarize_daily(windows: list[ActivityWindow]) -> list[DailySummary]:
 
 
 def summarize_weekly(daily_summaries: list[DailySummary], risks: list[RiskScore]) -> list[PeriodSummary]:
+    # 위험 점수를 날짜별로 빠르게 찾기 위한 lookup dict를 만든다.
     risk_by_day = {(risk.device_id, risk.date): risk.risk_score for risk in risks}
     grouped: dict[tuple[str, date], list[DailySummary]] = defaultdict(list)
 
     for summary in daily_summaries:
+        # weekday(): 월요일=0이므로 날짜에서 weekday만큼 빼면 해당 주의 월요일이 된다.
         week_start = summary.date - timedelta(days=summary.date.weekday())
         grouped[(summary.device_id, week_start)].append(summary)
 
@@ -81,6 +88,7 @@ def summarize_monthly(daily_summaries: list[DailySummary], risks: list[RiskScore
     grouped: dict[tuple[str, date], list[DailySummary]] = defaultdict(list)
 
     for summary in daily_summaries:
+        # 월별 그룹의 시작일은 항상 해당 월 1일로 맞춘다.
         month_start = summary.date.replace(day=1)
         grouped[(summary.device_id, month_start)].append(summary)
 
@@ -97,6 +105,7 @@ def summarize_monthly(daily_summaries: list[DailySummary], risks: list[RiskScore
 
 
 def calculate_risk_scores(daily_summaries: list[DailySummary], baseline_days: int = 14) -> list[RiskScore]:
+    # 장치별로 기준 활동량이 다를 수 있으므로 위험 점수도 장치별로 따로 계산한다.
     grouped: dict[str, list[DailySummary]] = defaultdict(list)
     for summary in daily_summaries:
         grouped[summary.device_id].append(summary)
@@ -105,6 +114,7 @@ def calculate_risk_scores(daily_summaries: list[DailySummary], baseline_days: in
     for device_id, summaries in grouped.items():
         ordered = sorted(summaries, key=lambda item: item.date)
         for index, summary in enumerate(ordered):
+            # 오늘 이전 최대 14일을 기준선으로 삼아 활동량 감소와 시간대 이탈을 판단한다.
             baseline = ordered[max(0, index - baseline_days) : index]
             risk = _risk_for_day(summary, baseline)
             risks.append(
@@ -130,6 +140,7 @@ def build_dashboard_summary(
     monthly_summaries: list[PeriodSummary],
     risks: list[RiskScore],
 ) -> dict[str, object]:
+    # 웹 대시보드가 한 번에 읽기 쉬운 형태로 최신 요약만 모은다.
     latest_daily = max(daily_summaries, key=lambda item: item.date)
     latest_risk = max(risks, key=lambda item: item.date)
     recent_7_days = sorted(daily_summaries, key=lambda item: item.date)[-7:]
@@ -165,6 +176,7 @@ def build_dashboard_summary(
 
 
 def calculate_longest_inactivity(windows: list[ActivityWindow]) -> int:
+    # 무활동 비율이 높은 구간이 연속으로 이어지는 시간을 누적해 최장 무활동 시간을 구한다.
     longest = 0
     current = 0
 
@@ -181,6 +193,7 @@ def calculate_longest_inactivity(windows: list[ActivityWindow]) -> int:
 
 
 def time_slot_for_hour(hour: int) -> str:
+    # 특정 시각이 어느 생활 시간대에 속하는지 반환한다.
     for slot, hours in TIME_SLOTS.items():
         if hour in hours:
             return slot
@@ -194,6 +207,7 @@ def _period_summary(
     summaries: list[DailySummary],
     risk_by_day: dict[tuple[str, date], int],
 ) -> PeriodSummary:
+    # 주간/월별 요약 로직은 거의 같으므로 공통 함수로 묶었다.
     risk_values = [
         risk_by_day[(summary.device_id, summary.date)]
         for summary in summaries
@@ -216,9 +230,11 @@ def _period_summary(
 
 
 def _risk_for_day(summary: DailySummary, baseline: list[DailySummary]) -> dict[str, object]:
+    # 8시간 이상 무활동이면 장시간 무활동 점수가 100점에 가까워진다.
     long_inactivity_score = min(100.0, summary.longest_inactivity_seconds / (8 * 60 * 60) * 100)
 
     if baseline:
+        # 기준선 대비 활동 시간이 줄어든 정도를 위험 요소로 본다.
         baseline_active = mean(item.total_active_seconds for item in baseline)
         activity_drop_ratio = max(0.0, (baseline_active - summary.total_active_seconds) / max(1, baseline_active))
         daily_activity_drop_score = min(100.0, activity_drop_ratio * 140)
@@ -230,6 +246,7 @@ def _risk_for_day(summary: DailySummary, baseline: list[DailySummary]) -> dict[s
         night_pattern_abnormality_score = 0.0
 
     risk_score = round(
+        # 문서에 정의한 위험도 가중치 공식이다.
         0.40 * long_inactivity_score
         + 0.25 * daily_activity_drop_score
         + 0.20 * time_slot_deviation_score
@@ -254,6 +271,7 @@ def _risk_for_day(summary: DailySummary, baseline: list[DailySummary]) -> dict[s
 
 
 def _time_slot_deviation(summary: DailySummary, baseline: list[DailySummary]) -> float:
+    # 오늘의 시간대별 활동 비율이 평소 비율과 얼마나 다른지 계산한다.
     total = max(1, summary.total_active_seconds)
     score = 0.0
 
@@ -269,6 +287,7 @@ def _time_slot_deviation(summary: DailySummary, baseline: list[DailySummary]) ->
 
 
 def _night_abnormality(summary: DailySummary, baseline: list[DailySummary]) -> float:
+    # 야간 활동 비중이 평소보다 높아졌을 때만 이상 점수를 부여한다.
     today_night = summary.time_slot_active_seconds["night"] / max(1, summary.total_active_seconds)
     baseline_night = mean(
         item.time_slot_active_seconds["night"] / max(1, item.total_active_seconds)
@@ -286,6 +305,7 @@ def _risk_reasons(
     time_slot_deviation_score: float,
     night_pattern_abnormality_score: float,
 ) -> list[str]:
+    # 대시보드에서 사람이 이해할 수 있도록 위험 점수의 원인을 문장으로 만든다.
     reasons: list[str] = []
     if long_inactivity_score >= 60:
         reasons.append("장시간 무활동 시간이 길다.")
@@ -301,6 +321,7 @@ def _risk_reasons(
 
 
 def _risk_level(score: int) -> str:
+    # 위험 점수 숫자를 화면에 표시할 단계명으로 변환한다.
     if score >= 80:
         return "고위험"
     if score >= 60:
@@ -308,4 +329,3 @@ def _risk_level(score: int) -> str:
     if score >= 30:
         return "주의"
     return "정상"
-

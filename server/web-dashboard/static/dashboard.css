@@ -1,3 +1,4 @@
+/* Wi-Care 대시보드의 표, 드롭다운, LED 상태 표시 레이아웃을 정의한다. */
 :root {
   --bg: #f4f7fb;
   --panel: #ffffff;

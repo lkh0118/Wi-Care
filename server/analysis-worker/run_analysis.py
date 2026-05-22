@@ -1,19 +1,10 @@
 from __future__ import annotations
 
 import argparse
-import json
 from pathlib import Path
-from typing import Any
 
-from activity_analysis.analyzer import (
-    build_dashboard_summary,
-    calculate_risk_scores,
-    summarize_daily,
-    summarize_monthly,
-    summarize_weekly,
-)
-from activity_analysis.mock_data_generator import generate_mock_activity_windows
-from activity_analysis.models import ActivityWindow, to_json_dict
+from activity_analysis.adapters import JsonAnalysisResultFileAdapter, MockActivityWindowFileAdapter
+from activity_analysis.service import AnalysisWorkerService
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -27,64 +18,24 @@ def main() -> None:
     SAMPLE_DATA_DIR.mkdir(exist_ok=True)
     OUTPUT_DIR.mkdir(exist_ok=True)
 
+    service = AnalysisWorkerService(
+        input_port=MockActivityWindowFileAdapter(SAMPLE_DATA_DIR),
+        output_port=JsonAnalysisResultFileAdapter(OUTPUT_DIR),
+    )
+
     for index, device_id in enumerate(args.device_ids):
-        analyze_device(
+        report = service.analyze_device(
             device_id=device_id,
             days=args.days,
             interval_minutes=args.interval_minutes,
             regenerate=args.regenerate,
             seed=args.seed + index,
         )
-
-
-def analyze_device(
-    device_id: str,
-    days: int,
-    interval_minutes: int,
-    regenerate: bool,
-    seed: int,
-) -> None:
-    device_sample_dir = SAMPLE_DATA_DIR / device_id
-    device_output_dir = OUTPUT_DIR / device_id
-    device_sample_dir.mkdir(parents=True, exist_ok=True)
-    device_output_dir.mkdir(parents=True, exist_ok=True)
-
-    input_path = device_sample_dir / "activity_windows_30d.json"
-    if regenerate or not input_path.exists():
-        windows_payload = generate_mock_activity_windows(
-            device_id=device_id,
-            days=days,
-            interval_minutes=interval_minutes,
-            seed=seed,
-        )
-        write_json(input_path, windows_payload)
-    else:
-        windows_payload = read_json(input_path)
-
-    windows = [ActivityWindow.from_api_payload(item) for item in windows_payload]
-    daily_summaries = summarize_daily(windows)
-    risk_scores = calculate_risk_scores(daily_summaries)
-    weekly_summaries = summarize_weekly(daily_summaries, risk_scores)
-    monthly_summaries = summarize_monthly(daily_summaries, risk_scores)
-    dashboard_summary = build_dashboard_summary(
-        daily_summaries=daily_summaries,
-        weekly_summaries=weekly_summaries,
-        monthly_summaries=monthly_summaries,
-        risks=risk_scores,
-    )
-
-    write_json(device_output_dir / "daily_summaries.json", to_json_dict(daily_summaries))
-    write_json(device_output_dir / "weekly_summaries.json", to_json_dict(weekly_summaries))
-    write_json(device_output_dir / "monthly_summary.json", to_json_dict(monthly_summaries))
-    write_json(device_output_dir / "risk_scores.json", to_json_dict(risk_scores))
-    write_json(device_output_dir / "dashboard_summary.json", to_json_dict(dashboard_summary))
-
-    latest_risk = risk_scores[-1]
-    print(f"[{device_id}] Mock 입력 데이터: {input_path}")
-    print(f"일일 요약 개수: {len(daily_summaries)}")
-    print(f"주간 요약 개수: {len(weekly_summaries)}")
-    print(f"월별 요약 개수: {len(monthly_summaries)}")
-    print(f"최근 위험 점수: {latest_risk.risk_score} / {latest_risk.risk_level}")
+        print(f"[{report.device_id}] Mock 입력 데이터: {report.input_path}")
+        print(f"일일 요약 개수: {report.daily_summary_count}")
+        print(f"주간 요약 개수: {report.weekly_summary_count}")
+        print(f"월별 요약 개수: {report.monthly_summary_count}")
+        print(f"최근 위험 점수: {report.latest_risk_score} / {report.latest_risk_level}")
 
 
 def parse_args() -> argparse.Namespace:
@@ -104,17 +55,6 @@ def parse_args() -> argparse.Namespace:
     if args.device_ids is None:
         args.device_ids = DEFAULT_DEVICE_IDS
     return args
-
-
-def read_json(path: Path) -> list[dict[str, Any]]:
-    with path.open("r", encoding="utf-8") as file:
-        return json.load(file)
-
-
-def write_json(path: Path, data: Any) -> None:
-    with path.open("w", encoding="utf-8") as file:
-        json.dump(data, file, ensure_ascii=False, indent=2)
-        file.write("\n")
 
 
 if __name__ == "__main__":
